@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>CampusConnect - Lost & Found Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- top header -->
+        <div class="header">
+            <div class="logo">
+                <h1>Lost and Found</h1>
+                <p>Lost & Found | Student Project Demo</p>
+            </div>
+            <div class="nav-links">
+                <button id="showAllBtn" class="active">All Items</button>
+                <button id="showLostBtn">Lost Items</button>
+                <button id="showFoundBtn">Found Items</button>
+            </div>
+        </div>
+
+        <!-- searching -->
+        <div class="search-panel">
+            <div class="form-title">Search Items</div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Search by keyword</label>
+                    <input type="text" id="searchInput" placeholder="Title, location, or description..." />
+                </div>
+                <div class="form-group">
+                    <label>From Date</label>
+                    <input type="date" id="startDateInput" />
+                </div>
+                <div class="form-group">
+                    <label>To Date</label>
+                    <input type="date" id="endDateInput" />
+                </div>
+                <div class="form-group">
+                    <label>&nbsp;</label>
+                    <button class="search-btn" id="searchBtn">Search</button>
+                </div>
+            </div>
+            <div class="search-stats" id="searchStats"></div>
+        </div>
+
+        <!-- publish area -->
+        <div class="form-panel">
+            <div class="form-title">Report Item</div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Type *</label>
+                    <select id="itemType">
+                        <option value="lost">Lost</option>
+                        <option value="found">Found</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Title *</label>
+                    <input type="text" id="itemTitle" placeholder="e.g., Black Wallet, iPhone 14" />
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" id="itemLocation" placeholder="Library, Cafeteria, Gym" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="itemDesc" rows="2" placeholder="Provide details ..."></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Incident Date *</label>
+                    <input type="date" id="itemIncidentDate" />
+                </div>
+                <div class="form-group">
+                    <label>Contact (email / phone) *</label>
+                    <input type="text" id="itemContact" placeholder="email address or phone number" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Image (optional)</label>
+                    <input type="file" id="itemImage" accept="image/*" />
+                    <div id="imagePreview" class="image-preview"></div>
+                </div>
+            </div>
+            <button class="submit-btn" id="submitItemBtn">Publish Item</button>
+        </div>
+
+        <!-- post -->
+        <h3 style="margin-top: 0.5rem; font-weight: 500;">Recent reports</h3>
+        <div id="itemsContainer" class="items-grid">
+            <div class="empty-state">No items yet. Use the form above to report lost or found belongings.</div>
+        </div>
+        
+        <div class="footer">
+            <span>Demo for Project</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
