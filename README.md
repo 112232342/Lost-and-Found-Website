@@ -6,3 +6,5 @@ the /data folder and .db file will be create when you first time run server.js
 ```npm i express path cors multer fs sqlite3```
 
 ```npm start```or```node <your dir\>server.js```
+
+127.0.0.1:3000
